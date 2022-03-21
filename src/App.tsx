@@ -1,6 +1,9 @@
 import './App.css';
+import Button from './components/Button';
+import Container from './components/Container';
 import Greet from './components/Greet';
 import Heading from './components/Heading';
+import Input from './components/Input';
 import Oscar from './components/Oscar';
 import Person from './components/Person';
 import PersonList from './components/PersonList';
@@ -26,13 +29,15 @@ function App() {
   ];
   return (
     <div className='App'>
-      <Greet name={'HwanMin'} messageCount={5} isLoggedIn={false} />
-      <Person name={personName} />
-      <PersonList name={personList} />
-      <Status status='loading' />
-      <Oscar>
-        <Heading>Hi There ~~ !! </Heading>
-      </Oscar>
+      <Button
+        handleClick={(event, id) => {
+          console.log('Button Clicked', event, id);
+        }}
+      />
+      <Input />
+      <Container
+        styles={{ border: 'solid 1px red', padding: '1rem', display: 'flex' }}
+      />
     </div>
   );
 }
