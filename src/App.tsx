@@ -1,13 +1,15 @@
-import "./App.css";
-import { UserContextProvider } from "./components/context/UserContext";
-import User from "./components/context/User";
-import MutableRef from "./components/ref/MutableRef";
+import './App.css';
+import { Counter } from './components/class/Counter';
+import List from './components/generics/List';
 function App() {
-	return (
-		<div className="App">
-			<MutableRef />
-		</div>
-	);
+  return (
+    <div className='App'>
+      <List
+        items={['Batman', 'Superman', 'Wonder Woman']}
+        onClick={(item) => console.log(item)}
+      />
+    </div>
+  );
 }
 
 export default App;
